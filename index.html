@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVAS Brand Community</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8fdf8;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #4caf50;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    }
+    .hidden {
+      display: none;
+    }
+    .welcome-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .forum-post, .qa-post {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .forum-post h3, .qa-post h3 {
+      margin: 0 0 10px;
+      color: #2e7d32;
+      cursor: pointer;
+    }
+    .forum-content, .qa-content {
+      display: none;
+      margin-top: 10px;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    .forum-content p, .qa-content p {
+      margin: 6px 0;
+    }
+    .author {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NOVAS Brand Community</h1>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('forum')">Forum</a>
+    <a onclick="showSection('qa')">Q&amp;A</a>
+  </nav>
+
+  <section id="home">
+    <div class="welcome-title">Welcome to the NOVAS Community!</div>
+    <p style="text-align: center;">Connect with fellow users of our smart home electronics. Share tips, ask questions, and make the most out of your NOVAS products.</p>
+  </section>
+
+  <section id="forum" class="hidden">
+    <h2>Community Forum</h2>
+    <div class="forum-post">
+      <h3 onclick="togglePost('post1')">My favorite automation setups using NOVAS devices</h3>
+      <p>Posted by <span class="author">TechHelper88</span> | Category: Smart Living | Replies: 3</p>
+      <div id="post1" class="forum-content">
+        <p>I’ve been exploring different automation setups using NOVAS products, and I’m really enjoying how customizable everything is. For example, I set my air purifier to run when the air quality dips below a threshold and my smart lamp to turn on as I walk into the room. It really feels like living in the future. Curious to hear how others are using these features!</p>
+        <p><span class="author">WiFiWizard:</span> I set my air purifier to turn on automatically when air quality drops.</p>
+        <p><span class="author">GadgetGal:</span> My smart lamp turns on gradually in the morning as a wake-up light.</p>
+        <p><span class="author">SmartLifeFan:</span> I sync my wireless dock with my bedtime routine. Super convenient!</p>
+      </div>
+    </div>
+    <div class="forum-post">
+      <h3 onclick="togglePost('post2')">Share your tips for new users</h3>
+      <p>Posted by <span class="author">FriendlyStarter</span> | Category: General | Replies: 3</p>
+      <div id="post2" class="forum-content">
+        <p>As someone new to the NOVAS ecosystem, I thought it might be helpful to gather some practical tips from more experienced users. There’s so much you can do with these devices, and I don’t want to miss out on any helpful tricks. Please share any small adjustments or habits you’ve picked up that make a big difference in everyday use!</p>
+        <p><span class="author">NovaGuru:</span> Always update firmware after setting up the device.</p>
+        <p><span class="author">VoicePower:</span> Use voice control for smart lamps—it’s a game changer.</p>
+        <p><span class="author">DockMaster:</span> Mount the wireless dock near your entryway for convenience.</p>
+      </div>
+    </div>
+    <div class="forum-post">
+      <h3 onclick="togglePost('post3')">Where do you keep your air purifier?</h3>
+      <p>Posted by <span class="author">CleanBreath22</span> | Category: Home Setup | Replies: 2</p>
+      <div id="post3" class="forum-content">
+        <p>I’ve been trying to figure out the best place to put my air purifier for maximum effectiveness. The manual suggests open spaces, but I’d love to know how others are using theirs. Do you move it around? Keep it in one room? Any layout tips or unexpected placements that work well?</p>
+        <p><span class="author">AllergyRelief:</span> I move mine between the bedroom and living room depending on the time of day.</p>
+        <p><span class="author">FilterFan:</span> I leave it near the hallway so it covers both the bedroom and kitchen.</p>
+      </div>
+    </div>
+    <div class="forum-post">
+      <h3 onclick="togglePost('post4')">Tips to avoid overheating when charging multiple devices</h3>
+      <p>Posted by <span class="author">CoolCharge</span> | Category: Power Management | Replies: 2</p>
+      <div id="post4" class="forum-content">
+        <p>Recently, I noticed my wireless charging dock getting warm when I charge my phone and earbuds at the same time. It hasn’t caused issues yet, but I’d love to know how others handle this. Any setup or tips that help reduce heat buildup or improve airflow around the dock?</p>
+        <p><span class="author">ChargerUser:</span> I stagger charging times during the day instead of all at once.</p>
+        <p><span class="author">SafeTech:</span> Elevating the dock helps with airflow and heat dissipation.</p>
+      </div>
+    </div>
+    <div class="forum-post">
+      <h3 onclick="togglePost('post5')">How do you clean your NOVAS devices?</h3>
+      <p>Posted by <span class="author">NeatFreak</span> | Category: Maintenance | Replies: 2</p>
+      <div id="post5" class="forum-content">
+        <p>Keeping devices clean can be tricky, especially with air vents and glossy surfaces. I try to stay on top of it but worry about damaging anything. What’s your routine for cleaning your NOVAS products? Do you use any specific tools or cleaning sprays that work well?</p>
+        <p><span class="author">DustyDan:</span> I wipe with microfiber cloth once a week.</p>
+        <p><span class="author">CareGuru:</span> Use a soft brush to clean vents without damaging them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="qa" class="hidden">
+    <h2>Q&amp;A</h2>
+    <div class="qa-post">
+      <h3 onclick="togglePost('q1')">Can I control my smart lamp with voice assistants like Alexa or Google Home?</h3>
+      <p>Asked by <span class="author">SmartVoiceUser</span> • 4 answers • ✅ Selected answer</p>
+      <div id="q1" class="qa-content">
+        <p><span class="author">LightMaster:</span> Yes, it supports Alexa and Google Home out of the box.</p>
+        <p><span class="author">SmartSetUp:</span> I had to update the firmware first, then it worked perfectly.</p>
+        <p><strong>✅ Selected Answer by SmartVoiceUser (by VoiceEnabledPro):</strong> Definitely compatible. Just follow the pairing instructions in the NOVAS app.</p>
+        <p><span class="author">LampLover99:</span> Mine took a few tries to connect, but now it works great!</p>
+      </div>
+    </div>
+    <div class="qa-post">
+      <h3 onclick="togglePost('q2')">Is it safe to leave the wireless charging dock plugged in 24/7?</h3>
+      <p>Asked by <span class="author">SafetyFirst</span> • 4 answers • ✅ Selected answer</p>
+      <div id="q2" class="qa-content">
+        <p><span class="author">PowerSafe:</span> Absolutely. Just ensure it’s placed in a ventilated area.</p>
+        <p><span class="author">ChargerPro:</span> Modern docks have built-in overheating protection.</p>
+        <p><strong>✅ Selected Answer by SafetyFirst (by DockSafetyGuru):</strong> Yes, it’s safe. Make sure the dock is certified and in good condition.</p>
+        <p><span class="author">AlwaysPlugged:</span> I even charge two phones and haven’t noticed any heat issues.</p>
+      </div>
+    </div>
+    <div class="qa-post">
+      <h3 onclick="togglePost('q3')">Why is the air quality light on my purifier always yellow?</h3>
+      <p>Asked by <span class="author">FreshAirFan</span> • 4 answers • ✅ Selected answer</p>
+      <div id="q3" class="qa-content">
+        <p><span class="author">SensorExpert:</span> Try checking your air quality manually; it could be calibration.</p>
+        <p><span class="author">CleanRoom:</span> Mine did that until I replaced the filter.</p>
+        <p><strong>✅ Selected Answer by FreshAirFan (by AirMonitorMark):</strong> It’s likely detecting consistent moderate pollution. Try moving it away from dust sources.</p>
+        <p><span class="author">DustBuster:</span> Check for nearby curtains or furniture—it might trap airflow.</p>
+      </div>
+    </div>
+  <div class="qa-post">
+  <h3 onclick="togglePost('q4')">How often should I replace the filter in my air purifier?</h3>
+  <p>Asked by <span class="author">FilterFanatic</span> • 3 answers • ✅ Selected answer</p>
+  <div id="q4" class="qa-content">
+    <p><span class="author">BreatheEasy:</span> I do it every 6 months, but depends on usage.</p>
+    <p><span class="author">HomeHealth:</span> If you have pets or allergies, consider replacing more frequently.</p>
+    <p><strong>✅ Selected Answer by FilterFanatic (by CleanAirNerd):</strong> Every 4 to 6 months is ideal. NOVAS devices also notify you when it’s time to change the filter.</p>
+  </div>
+</div>
+<div class="qa-post">
+  <h3 onclick="togglePost('q5')">Can multiple users control one smart device?</h3>
+  <p>Asked by <span class="author">RoommateLife</span> • 3 answers • ✅ Selected answer</p>
+  <div id="q5" class="qa-content">
+    <p><span class="author">TechieTina:</span> Yes! You can share device access in the NOVAS app.</p>
+    <p><span class="author">SmartHouse:</span> We use it as a family and it works well for all of us.</p>
+    <p><strong>✅ Selected Answer by RoommateLife (by AppWizardSam):</strong> Just invite additional users via the app settings. Everyone will have control if they accept the invite.</p>
+  </div>
+</div>
+<div class="qa-post">
+  <h3 onclick="togglePost('q6')">Do smart lamps remember their last brightness setting?</h3>
+  <p>Asked by <span class="author">DimmerDreamer</span> • 3 answers • ✅ Selected answer</p>
+  <div id="q6" class="qa-content">
+    <p><span class="author">BrightTech:</span> Mine does! Very handy for bedtime.</p>
+    <p><span class="author">GadgetEnthusiast:</span> It depends on the model—check the settings.</p>
+    <p><strong>✅ Selected Answer by DimmerDreamer (by LightLogicTom):</strong> Yes, the default setting is to retain your last used brightness level, unless manually reset.</p>
+  </div>
+</div>
+</section>
+<script>
+    function togglePost(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
